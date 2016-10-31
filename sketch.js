@@ -42,7 +42,7 @@ function drawHour() {
 }
 
 function setup() {
-  createCanvas(640,1136);
+  createCanvas(320,480);
   angleMode(DEGREES);
 }
 
