@@ -3,8 +3,8 @@ var minuteColor = "#009999";
 
 function drawSecond() {
   strokeWeight(2.5);
-  stroke(100);
   line(15,0,-130,0);
+  ellipse(0,0,10,10);
 }
 
 function drawMinute() {
@@ -52,22 +52,27 @@ var m=minute();
 var s=second();
 
   translate(width/2,220);
-  background(230);
   
-  fill(100);
-  noStroke();
-  ellipse(0,0,10,10);
+  if (h>=20 && h<=8) {
+  background(70);
+  stroke(255);
+  fill(255);
+  } else {
+    background(230);
+    stroke(100);
+    fill(100);
+  }
+
+  push();
+  rotate(m*6);
+  drawMinute();
+  pop();
 
   push();
   if (h<=12) {
     rotate((h*30)+(m/2));
     } else { rotate(((h-12)*30)+(m/2)); }
   drawHour();
-  pop();
-  
-  push();
-  rotate(m*6);
-  drawMinute();
   pop();
   
   push();
@@ -79,6 +84,7 @@ var s=second();
   
   push();
   fill(hourColor);
+  noStroke();
   if (h>=0 && h<=9) {
   text("0"+h+":", -45, 210);
   } else { text(h+":", -45, 210); } 
@@ -86,12 +92,14 @@ var s=second();
   
   push();
   fill(minuteColor);
+  noStroke();
   if(m>=0 && m<=9) {
   text("0"+m+":", -10, 210);
   } else { text(m+":", -10, 210); }
   pop();
   
   push();
+  noStroke();
   if(s>=0 && s<=9) {
   text("0"+s, 25, 210);
   } else {text(s, 25, 210);}
