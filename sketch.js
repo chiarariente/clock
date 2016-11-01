@@ -53,7 +53,7 @@ var s=second();
 
   translate(width/2,220);
   
-  if (h>=20 && h<=8) {
+  if (h>=20 || h<=8 ) {
   background(70);
   stroke(255);
   fill(255);
