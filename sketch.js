@@ -42,7 +42,7 @@ function drawHour() {
 }
 
 function setup() {
-  createCanvas(320,480);
+  createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
 }
 
@@ -51,7 +51,7 @@ var h=hour();
 var m=minute();
 var s=second();
 
-  translate(width/2,220);
+  translate(width/2,height/2);
   
   if (h>=20 || h<=8 ) {
   background(70);
