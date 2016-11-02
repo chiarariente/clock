@@ -51,7 +51,11 @@ var h=hour();
 var m=minute();
 var s=second();
 
-  translate(width/2,height/2);
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+  translate(width/2,height/2-30);
   
   if (h>=20 || h<=8 ) {
   background(70);
@@ -70,13 +74,13 @@ var s=second();
 
   push();
   if (h<=12) {
-    rotate((h*30)+(m/2));
-    } else { rotate(((h-12)*30)+(m/2)); }
+    rotate(h*30+m/2);
+    } else { rotate((h-12*30)+m/2); }
   drawHour();
   pop();
   
   push();
-  rotate((s*6)+90);
+  rotate(s*6+90);
   drawSecond();
   pop();
  
