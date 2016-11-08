@@ -17,8 +17,8 @@ function drawMinute() {
     vertex(-105,105);
     vertex(-105,-105);
     vertex(-7,-105);
-    vertex(-7,-21);
-    vertex(7,-21);
+    vertex(-7,-20);
+    vertex(7,-20);
     vertex(7,-105);
     vertex(105,-105);
   endShape();
@@ -34,15 +34,15 @@ function drawHour() {
     vertex(-98,98);
     vertex(-98,-98);
     vertex(-7,-98);
-    vertex(-7,-38);
-    vertex(7,-38);
+    vertex(-7,-45);
+    vertex(7,-45);
     vertex(7,-98);
     vertex(98,-98);
   endShape();
 }
 
 function setup() {
-  createCanvas(320,480);
+  createCanvas(800,600);
   angleMode(DEGREES);
 }
 
@@ -51,7 +51,7 @@ var h=hour();
 var m=minute();
 var s=second();
 
-  translate(width/2,220);
+  translate(width/2,height/2-30);
   
   if (h>=20 || h<=8 ) {
   background(70);
