@@ -86,13 +86,13 @@ function myText() {
     }
 }
 
-window.onresize = function(event){
-  document.location.reload(true);
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+}
+
+window.onresize = function(event){
+  document.location.reload(true);
 }
 
 function draw() {
