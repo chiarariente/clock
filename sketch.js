@@ -91,14 +91,14 @@ function setup() {
   angleMode(DEGREES);
 }
 
-window.onresize = function(event){
-  document.location.reload(true);
-}
-
 function draw() {
 var h=hour();
 var m=minute();
 var s=second();
+  
+  window.onresize = function(event){
+    document.location.reload(true);
+  }
 
   translate(width/2,height/2-30);
   
