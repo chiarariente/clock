@@ -116,12 +116,12 @@ var s=second();
   push();
   if (h<=12) {
     rotate((h*30)+(m/2));
-    } else { rotate((h-12*30)+m/2); }
+    } else { rotate(((h-12)*30)+(m/2)); }
   drawHour();
   pop();
   
   push();
-  rotate(s*6+90);
+  rotate((s*6)+90);
   drawSecond();
   pop();
  
